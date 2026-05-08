@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const API_URL = 'https://sun-win.onrender.com/api/history';
 const LEARNING_FILE = 'learning_data.json';
