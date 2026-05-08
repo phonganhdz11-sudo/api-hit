@@ -2784,40 +2784,7 @@ app.get('/reset-learning', (req, res) => {
 loadLearningData();
 loadPredictionHistory();
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on http://0.0.0.0:${PORT}`);
-  console.log('Advanced Tai Xiu Prediction API v3.0 - Self-Learning Edition');
-  console.log('');
-  console.log('NEW FEATURES:');
-  console.log('  - Self-learning from prediction results');
-  console.log('  - Pattern weight adjustment based on accuracy');
-  console.log('  - Streak analysis and smart reversal');
-  console.log('  - Adaptive confidence based on recent performance');
-  console.log('  - Persistent learning data storage');
-  console.log('  - AUTO-SAVE: History saves automatically every 30s');
-  console.log('');
-  console.log('Supported Patterns:');
-  console.log('  - Cầu Bệt, Đảo 1-1, 2-2, 3-3');
-  console.log('  - Cầu 1-2-1, 1-2-3, 3-2-1');
-  console.log('  - Cầu Nhảy Cóc, Nhịp Nghiêng');
-  console.log('  - Cầu 3 Ván 1, Bẻ Cầu, Chu Kỳ');
-  console.log('  - Biểu Đồ Đường (Hũ & MD5)');
-  console.log('');
-  console.log('Endpoints:');
-  console.log('  / - Homepage');
-  console.log('  /hu - Dự đoán Tài Xỉu Hũ');
-  console.log('  /md5 - Dự đoán Tài Xỉu MD5');
-  console.log('  /hu/lichsu - Lịch sử dự đoán Hũ');
-  console.log('  /md5/lichsu - Lịch sử dự đoán MD5');
-  console.log('  /hu/analysis - Phân tích chi tiết Hũ');
-  console.log('  /md5/analysis - Phân tích chi tiết MD5');
-  console.log('  /hu/learning - Thống kê học tập Hũ');
-  console.log('  /md5/learning - Thống kê học tập MD5');
-  console.log('  /reset-learning - Reset dữ liệu học');
-  
-  startAutoSaveTask();
-
-});
+startAutoSaveTask();
 
 app.get("/", (req, res) => {
   res.json({
