@@ -2816,4 +2816,16 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log('  /reset-learning - Reset dữ liệu học');
   
   startAutoSaveTask();
+
+});
+
+app.get("/", (req, res) => {
+  res.json({
+    status: "online",
+    message: "API HIT đang chạy"
+  });
+});
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
